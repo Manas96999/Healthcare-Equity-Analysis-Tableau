@@ -1,56 +1,62 @@
-🏥 U.S. Healthcare Equity & Hospital Performance Analysis
-📌 Project Overview
-This project is a deep-dive into Healthcare Equity, exploring whether a community’s wealth (Median Household Income) directly impacts the quality of clinical care provided by local hospitals. By analyzing a master dataset of over 5,000 U.S. facilities, I built a high-end analytical dashboard to prove the correlation between economic status and clinical risk.
+🏥 U.S. Healthcare Equity & Clinical Performance Analysis
+Strategic Data Science Analysis to Measure Clinical Disparities
 
-🖥️ Dashboard Preview
-Tip: \n p1.png \n\n p2.png \n\n p3.png
+📌 Executive Summary
+This project investigates the critical relationship between community socioeconomic status and healthcare quality across 5,000+ U.S. hospitals. By correlating Median Household Income with Clinical Risk Scores, I identified a significant "Equity Gap" where lower-income communities face higher mortality and safety risks. The dashboard serves as a command center for policymakers to identify and target underperforming regional hotspots.
 
-📊 Technical Components
-National Benchmarking: Established a baseline National Average Score to measure performance deviation across different states.
+🖼️ Dashboard Showcase
+<p align="center"> <img src="p1.png" width="850" title="Healthcare Equity Command Center">
 
-Geospatial Analysis: Developed an interactive USA Map to identify "Clinical Hotspots" where performance is falling behind.
 
-Correlation Modeling: Used Scatter Plots with linear trend lines to mathematically prove the "Equity Gap".
 
-Custom UI/UX: Applied a premium "7 Vogue" Dark Theme to ensure the data "glows" and is easy for executives to read.
 
-👥 Who Benefits from This Project?
-This analysis isn't just a student project; it provides value to multiple professional sectors:
+<img src="p2.png" width="850" title="Regional Hotspot Analysis">
 
-Healthcare Administrators: To identify which of their facilities are underperforming relative to national standards.
 
-Policy Makers & Government: To see exactly which low-income regions require more funding and medical resources to close the equity gap.
 
-Public Health Researchers: To use the correlation data as a foundation for studying the "social determinants of health".
 
-Data Scientists/Recruiters: To see a live example of Level of Detail (LOD) expressions, data cleaning, and professional storytelling.
+<img src="p3.png" width="850" title="Income vs Clinical Risk Correlation">
 
-🏁 Conclusion & Outcome
-The most significant outcome of this project is the Statistical Confirmation of the Equity Gap.
 
-The data clearly shows that as Median Household Income decreases, Clinical Risk Scores increase. By centralizing this data into a single dashboard, we move away from "guessing" and toward data-driven decision-making. The better outcome here is the ability to target healthcare interventions with surgical precision, potentially improving survival rates in vulnerable communities.
+<i>A high-contrast, dark-mode command center designed for executive-level healthcare policy analysis.</i> </p>
 
-🛠️ Tech Stack
-Visualization: Tableau Desktop
+🛠️ The Data Journey (Process)
+1. Data Gathering
+Sources: Integrated CMS Hospital General Information datasets with U.S. Census-based median household income data (mapped via ZIP codes).
 
-Data Prep: Python & SQL
+Volume: Handled records for 5,000+ facilities spanning all 50 U.S. states to ensure national representation.
 
-Analysis: Linear Regression & Geospatial Mapping
+2. AI-Powered Cleaning & ETL
+AI Assistance: Used AI-driven Python scripts to perform complex joins between healthcare metrics and demographic datasets, handling 15% missing values in clinical scoring.
 
-👨‍💻 About the Developer
-Manas Hitendra Bramhankar
+Data Transformation: * Performed Normalization to standardize clinical scores across diverse hospital types.
 
-Student: 3rd Year B.Tech in Artificial Intelligence & Data Science at Sandip Foundation.
+Created Income Tiers (High, Mid, Low) to enable categorical benchmarking.
 
-Founder: 7 Vogue.
+Validated geographic data to ensure 100% accuracy in geospatial mapping.
 
-Vision: Using AI and Data Analytics to bridge gaps in healthcare and D2C business models.
+3. Data Modelling
+Architecture: Developed a unified master data structure optimized for high-performance filtering in Tableau.
 
-How to add your screenshot:
-Take a high-quality screenshot of your final dashboard.
+Calculated Fields: Implemented LOD (Level of Detail) Expressions to maintain a stable National Average Score benchmark across all dashboard states.
 
-Rename that image to dashboard.png.
+Statistical Analysis: Applied Linear Regression trend lines within the scatter plot to visualize the mathematical strength of the wealth-health correlation.
 
-Upload it to the same folder on GitHub as this README file.
+💡 Key Clinical Insights
+The Equity Gap: The data mathematically confirms a negative correlation: as community income increases, clinical risk scores significantly decrease.
 
-GitHub will automatically show the image in the "Dashboard Preview" section above.
+National Performance Gap: There is a distinct 10.55% disparity in clinical safety scores between the highest and lowest income tiers.
+
+Regional Outliers: Identified specific states where even mid-income hospitals fall below the national average, suggesting regional systemic issues.
+
+🚀 Tools Used
+Tableau: Advanced Visualization, Geospatial Mapping, and Dashboard Actions.
+
+Python/AI: Data Cleaning, ETL, and Automated Scripting.
+
+Statistics: Correlation Analysis and Linear Regression Modeling.
+
+UI/UX Design: Professional "7 Vogue" Dark Theme for high-impact storytelling.
+
+📬 Contact & Portfolio
+Manas Hitendra Bramhankar 3rd Year B.Tech, AI & Data Science [www.linkedin.com/in/manas-bramhankar-73831628b] | [manasbramhankar@gmail.com]
