@@ -1,0 +1,1431 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='all'>
+      <format attr='font-family' value='Trebuchet MS' />
+      <format attr='color' value='#e0e0e0' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' inline='true' name='federated.1md3m7p05offnb166bxzf0fcu5jn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='World_Class_Healthcare_Master_Final' name='textscan.04oh2251pbk30110rnmad152l4q9'>
+            <connection class='textscan' directory='D:/DATA_ANNA/hospital analysis' filename='World_Class_Healthcare_Master_Final.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='measures' name='textscan.00714en07rjfyh162na7f0m5c719'>
+            <connection class='textscan' directory='D:/DATA_ANNA/hospital analysis/dataset/data_tables' filename='measures.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.04oh2251pbk30110rnmad152l4q9' name='World_Class_Healthcare_Master_Final.csv' table='[World_Class_Healthcare_Master_Final#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Facility ID' ordinal='0' />
+              <column datatype='integer' name='ZIP Code' ordinal='1' />
+              <column datatype='string' name='State' ordinal='2' />
+              <column datatype='string' name='City/Town' ordinal='3' />
+              <column datatype='string' name='Facility Name' ordinal='4' />
+              <column datatype='string' name='Hospital Type' ordinal='5' />
+              <column datatype='string' name='Hospital Ownership' ordinal='6' />
+              <column datatype='string' name='Measure Name' ordinal='7' />
+              <column datatype='real' name='Score' ordinal='8' />
+              <column datatype='string' name='Compared to National' ordinal='9' />
+              <column datatype='real' name='Hospital overall rating' ordinal='10' />
+              <column datatype='real' name='Response Rate (%)' ordinal='11' />
+              <column datatype='real' name='Median_Household_Income' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.00714en07rjfyh162na7f0m5c719' name='measures.csv' table='[measures#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Measure ID' ordinal='0' />
+              <column datatype='string' name='Measure' ordinal='1' />
+              <column datatype='string' name='Type' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[measures.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Facility ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Facility ID]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Facility ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ZIP Code]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>ZIP Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City/Town</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City/Town]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>City/Town</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Facility Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Facility Name]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Facility Name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Type]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Hospital Type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Ownership</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Ownership]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Hospital Ownership</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Measure Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Measure Name]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Measure Name</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Score]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Score</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Compared to National</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Compared to National]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Compared to National</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital overall rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Hospital overall rating]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Hospital overall rating</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Response Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Response Rate (%)]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Response Rate (%)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Household_Income</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Median_Household_Income]</local-name>
+            <parent-name>[World_Class_Healthcare_Master_Final.csv]</parent-name>
+            <remote-alias>Median_Household_Income</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Measure ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Measure ID]</local-name>
+            <parent-name>[measures.csv]</parent-name>
+            <remote-alias>Measure ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Measure]</local-name>
+            <parent-name>[measures.csv]</parent-name>
+            <remote-alias>Measure</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[measures.csv]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Income Tier ' datatype='string' name='[Calculation_893120138110029824]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Median_Household_Income] &lt; 50000 THEN &quot;Low Income (&lt;$50k)&quot;&#13;&#10;ELSEIF [Median_Household_Income] &lt; 100000 THEN &quot;Mid Income ($50k-$100k)&quot;&#13;&#10;ELSE &quot;High Income (&gt;$100k)&quot;&#13;&#10;END' />
+      </column>
+      <column caption='National Average' datatype='real' name='[Calculation_893120138118463489]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED : AVG([Score]) }' />
+      </column>
+      <column caption='Equity Gap %' datatype='real' name='[Calculation_893120138145325058]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [Calculation_893120138110029824] : AVG([Score]) }' />
+      </column>
+      <column datatype='string' name='[City/Town]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' name='[Facility ID]' role='dimension' type='ordinal' />
+      <column caption='Median Household Income' datatype='real' name='[Median_Household_Income]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[ZIP Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='World_Class_Healthcare_Master_Final.csv' datatype='table' name='[__tableau_internal_object_id__].[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]' role='measure' type='quantitative' />
+      <column caption='measures.csv' datatype='table' name='[__tableau_internal_object_id__].[measures.csv_829919B86E8443BBA612BB47145B3FCE]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/MANAS/AppData/Local/Temp/TableauTemp/#TableauTemp_1u8jled0yb52cx1e8qhh11q1tg5t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 01:09:35 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C' table='[Extract].[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]' type='table' />
+            <relation name='measures.csv_829919B86E8443BBA612BB47145B3FCE' table='[Extract].[measures.csv_829919B86E8443BBA612BB47145B3FCE]' type='table' />
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Facility ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Facility ID]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Facility ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21781</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ZIP Code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ZIP Code]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>ZIP Code</remote-alias>
+              <ordinal>1</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>2</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>74</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City/Town</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City/Town]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>City/Town</remote-alias>
+              <ordinal>3</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12288</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Facility Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Facility Name]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Facility Name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21814</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hospital Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Hospital Type]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Hospital Type</remote-alias>
+              <ordinal>5</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hospital Ownership</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Hospital Ownership]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Hospital Ownership</remote-alias>
+              <ordinal>6</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Measure Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Measure Name]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Measure Name</remote-alias>
+              <ordinal>7</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Score]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Score</remote-alias>
+              <ordinal>8</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4303</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Compared to National</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Compared to National]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Compared to National</remote-alias>
+              <ordinal>9</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hospital overall rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Hospital overall rating]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Hospital overall rating</remote-alias>
+              <ordinal>10</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Response Rate (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Response Rate (%)]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Response Rate (%)</remote-alias>
+              <ordinal>11</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>108</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Median_Household_Income</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Median_Household_Income]</local-name>
+              <parent-name>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</parent-name>
+              <remote-alias>Median_Household_Income</remote-alias>
+              <ordinal>12</ordinal>
+              <family>World_Class_Healthcare_Master_Final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17733</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Measure ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Measure ID]</local-name>
+              <parent-name>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</parent-name>
+              <remote-alias>Measure ID</remote-alias>
+              <ordinal>13</ordinal>
+              <family>measures.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Measure</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Measure]</local-name>
+              <parent-name>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</parent-name>
+              <remote-alias>Measure</remote-alias>
+              <ordinal>14</ordinal>
+              <family>measures.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type]</local-name>
+              <parent-name>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</parent-name>
+              <remote-alias>Type</remote-alias>
+              <ordinal>15</ordinal>
+              <family>measures.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[measures.csv_829919B86E8443BBA612BB47145B3FCE]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='World_Class_Healthcare_Master_Final.csv' id='World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C'>
+            <properties context=''>
+              <relation connection='textscan.04oh2251pbk30110rnmad152l4q9' name='World_Class_Healthcare_Master_Final.csv' table='[World_Class_Healthcare_Master_Final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Facility ID' ordinal='0' />
+                  <column datatype='integer' name='ZIP Code' ordinal='1' />
+                  <column datatype='string' name='State' ordinal='2' />
+                  <column datatype='string' name='City/Town' ordinal='3' />
+                  <column datatype='string' name='Facility Name' ordinal='4' />
+                  <column datatype='string' name='Hospital Type' ordinal='5' />
+                  <column datatype='string' name='Hospital Ownership' ordinal='6' />
+                  <column datatype='string' name='Measure Name' ordinal='7' />
+                  <column datatype='real' name='Score' ordinal='8' />
+                  <column datatype='string' name='Compared to National' ordinal='9' />
+                  <column datatype='real' name='Hospital overall rating' ordinal='10' />
+                  <column datatype='real' name='Response Rate (%)' ordinal='11' />
+                  <column datatype='real' name='Median_Household_Income' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C' table='[Extract].[World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C]' type='table' />
+            </properties>
+          </object>
+          <object caption='measures.csv' id='measures.csv_829919B86E8443BBA612BB47145B3FCE'>
+            <properties context=''>
+              <relation connection='textscan.00714en07rjfyh162na7f0m5c719' name='measures.csv' table='[measures#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Measure ID' ordinal='0' />
+                  <column datatype='string' name='Measure' ordinal='1' />
+                  <column datatype='string' name='Type' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='measures.csv_829919B86E8443BBA612BB47145B3FCE' table='[Extract].[measures.csv_829919B86E8443BBA612BB47145B3FCE]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Measure Name]' />
+              <expression op='[Measure]' />
+            </expression>
+            <first-end-point object-id='World_Class_Healthcare_Master_Final.csv_A2FA93F4C473472A9000D7EBC4DF7B9C' />
+            <second-end-point object-id='measures.csv_829919B86E8443BBA612BB47145B3FCE' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='KPI-Equity Gap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column caption='Income Tier ' datatype='string' name='[Calculation_893120138110029824]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Median_Household_Income] &lt; 50000 THEN &quot;Low Income (&lt;$50k)&quot;&#13;&#10;ELSEIF [Median_Household_Income] &lt; 100000 THEN &quot;Mid Income ($50k-$100k)&quot;&#13;&#10;ELSE &quot;High Income (&gt;$100k)&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Equity Gap %' datatype='real' name='[Calculation_893120138145325058]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [Calculation_893120138110029824] : AVG([Score]) }' />
+            </column>
+            <column caption='Median Household Income' datatype='real' name='[Median_Household_Income]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Score]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_893120138145325058]' derivation='Avg' name='[avg:Calculation_893120138145325058:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Calculation_893120138145325058:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'>PERFORMANCE GAP</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Calculation_893120138145325058:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{97CCB996-8F76-4B00-928D-C94DDE1E38D9}' />
+    </worksheet>
+    <worksheet name='KPI-national avg'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column datatype='real' name='[Score]' role='measure' type='quantitative' />
+            <column-instance column='[Score]' derivation='Avg' name='[avg:Score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='10'>National AVG</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E6B2663F-265E-4170-ABA5-E80CA18DD00D}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column caption='Income Tier ' datatype='string' name='[Calculation_893120138110029824]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Median_Household_Income] &lt; 50000 THEN &quot;Low Income (&lt;$50k)&quot;&#13;&#10;ELSEIF [Median_Household_Income] &lt; 100000 THEN &quot;Mid Income ($50k-$100k)&quot;&#13;&#10;ELSE &quot;High Income (&gt;$100k)&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Median Household Income' datatype='real' name='[Median_Household_Income]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Score]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_893120138110029824]' derivation='Attribute' name='[attr:Calculation_893120138110029824:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Score]' derivation='Avg' name='[avg:Score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Median_Household_Income]' derivation='Sum' name='[sum:Median_Household_Income:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[Longitude (generated)]' field-type='quantitative' max='37335381.6494141' min='25045295.734284665' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[Latitude (generated)]' field-type='quantitative' max='5979084.0189355891' min='2990591.0839896817' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#121212' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#e0e0e0' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='admin-0-label-5th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-4th-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-3rd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-2nd-tier' value='false' />
+            <format attr='enabled' id='admin-0-label-1st-tier' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='dark' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' />
+              <text column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:State:nk]' />
+              <lod column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:State:nk]' />
+              <tooltip column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[attr:Calculation_893120138110029824:nk]' />
+              <tooltip column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[sum:Median_Household_Income:qk]' />
+              <geometry column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='8' />
+                <format attr='color' value='#121212' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1md3m7p05offnb166bxzf0fcu5jn].[Latitude (generated)]</rows>
+        <cols>[federated.1md3m7p05offnb166bxzf0fcu5jn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{430DC5FD-A209-4DE5-8499-6F2CB827C74C}' />
+    </worksheet>
+    <worksheet name='bar chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column caption='Income Tier ' datatype='string' name='[Calculation_893120138110029824]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Median_Household_Income] &lt; 50000 THEN &quot;Low Income (&lt;$50k)&quot;&#13;&#10;ELSEIF [Median_Household_Income] &lt; 100000 THEN &quot;Mid Income ($50k-$100k)&quot;&#13;&#10;ELSE &quot;High Income (&gt;$100k)&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Median Household Income' datatype='real' name='[Median_Household_Income]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Score]' role='measure' type='quantitative' />
+            <column-instance column='[Score]' derivation='Avg' name='[avg:Score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_893120138110029824]' derivation='None' name='[none:Calculation_893120138110029824:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' value='58' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' value='17' />
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' value='left' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#121212' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]</rows>
+        <cols>[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]</cols>
+      </table>
+      <simple-id uuid='{D938F9E9-FB7E-4980-A7FA-493DCD83AB5D}' />
+    </worksheet>
+    <worksheet name='scatterd plot '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column caption='Income Tier ' datatype='string' name='[Calculation_893120138110029824]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Median_Household_Income] &lt; 50000 THEN &quot;Low Income (&lt;$50k)&quot;&#13;&#10;ELSEIF [Median_Household_Income] &lt; 100000 THEN &quot;Mid Income ($50k-$100k)&quot;&#13;&#10;ELSE &quot;High Income (&gt;$100k)&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Facility ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Facility Name]' role='dimension' type='nominal' />
+            <column caption='Median Household Income' datatype='real' name='[Median_Household_Income]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Score]' role='measure' type='quantitative' />
+            <column-instance column='[Median_Household_Income]' derivation='Avg' name='[avg:Median_Household_Income:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Score]' derivation='Avg' name='[avg:Score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_893120138110029824]' derivation='None' name='[none:Calculation_893120138110029824:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Facility ID]' derivation='None' name='[none:Facility ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Facility Name]' derivation='None' name='[none:Facility Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Median_Household_Income]' derivation='Sum' name='[sum:Median_Household_Income:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Score]' derivation='Sum' name='[sum:Score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[sum:Median_Household_Income:qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[sum:Score:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.1md3m7p05offnb166bxzf0fcu5jn].[sum:Score:qk]</column>
+            <column>[federated.1md3m7p05offnb166bxzf0fcu5jn].[sum:Median_Household_Income:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#e0e0e0' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#e0e0e0' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#e0e0e0' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' />
+              <lod column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Facility Name:nk]' />
+              <lod column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Facility ID:ok]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='111' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]</rows>
+        <cols>[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Median_Household_Income:qk]</cols>
+      </table>
+      <simple-id uuid='{30C29E76-7417-4079-9BE3-2BFCE17E8CD9}' />
+    </worksheet>
+    <worksheet name='total hopital count KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='World_Class_Healthcare_Master_Final.csv+ (Multiple Connections)' name='federated.1md3m7p05offnb166bxzf0fcu5jn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1md3m7p05offnb166bxzf0fcu5jn'>
+            <column datatype='string' name='[Facility Name]' role='dimension' type='nominal' />
+            <column-instance column='[Facility Name]' derivation='CountD' name='[ctd:Facility Name:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1md3m7p05offnb166bxzf0fcu5jn].[ctd:Facility Name:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'>HOSPITALS</run>
+                <run>Æ&#10;</run>
+                <run fontsize='24'><![CDATA[<[federated.1md3m7p05offnb166bxzf0fcu5jn].[ctd:Facility Name:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2A1D51CC-E841-440F-8D14-64E1F96D8A7F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98414' id='13' param='horz' type-v2='layout-flow' w='99166' x='417' y='793'>
+            <zone h='98414' id='11' type-v2='layout-basic' w='88066' x='417' y='793'>
+              <zone h='90133' id='8' param='horz' type-v2='layout-flow' w='88066' x='417' y='9074'>
+                <zone h='90133' id='6' type-v2='layout-basic' w='88066' x='417' y='9074'>
+                  <zone h='41340' id='10' name='Map' show-title='false' w='88066' x='417' y='17596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='40271' id='17' name='scatterd plot ' show-title='false' w='49732' x='417' y='58936'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='8522' id='20' name='total hopital count KPI' show-title='false' w='24885' x='417' y='9074'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='8522' id='21' name='KPI-national avg' show-title='false' w='24187' x='25302' y='9074'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='8522' id='22' name='KPI-Equity Gap' show-title='false' w='38994' x='49489' y='9074'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='40271' id='23' name='bar chart' show-title='false' w='38334' x='50149' y='58936'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='8281' id='3' type-v2='text' w='88066' x='417' y='793'>
+                <formatted-text>
+                  <run bold='true' fontsize='20'>U.S. Healthcare Equity &amp; Hospital Performance</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#0000007e' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='213' h='98414' id='12' is-fixed='true' param='vert' type-v2='layout-flow' w='11100' x='88483' y='793'>
+              <zone h='5848' id='14' name='Map' pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' type-v2='color' w='11100' x='88483' y='793'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8226' id='24' name='bar chart' pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' type-v2='color' w='11100' x='88483' y='6641'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='background-color' value='#121212' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#121212' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98110' id='31' param='vert' type-v2='layout-flow' w='98296' x='852' y='945'>
+                <zone h='8258' id='3' type-v2='text' w='75612' x='852' y='945'>
+                  <formatted-text>
+                    <run bold='true' fontsize='20'>U.S. Healthcare Equity &amp; Hospital Performance</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#0000007e' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='60' h='8497' id='20' is-fixed='true' name='total hopital count KPI' show-title='false' w='21367' x='852' y='9203'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='60' h='8497' id='21' is-fixed='true' name='KPI-national avg' show-title='false' w='20767' x='22219' y='9203'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='60' h='8497' id='22' is-fixed='true' name='KPI-Equity Gap' show-title='false' w='33478' x='42986' y='9203'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41211' id='10' is-fixed='true' name='Map' show-title='false' w='75612' x='852' y='17700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6966' id='14' name='Map' pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' type-v2='color' w='22684' x='76464' y='945'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40144' id='17' is-fixed='true' name='scatterd plot ' show-title='false' w='42701' x='852' y='58911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40144' id='23' is-fixed='true' name='bar chart' show-title='false' w='32911' x='43553' y='58911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9800' id='24' name='bar chart' pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' type-v2='color' w='22684' x='76464' y='7911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#121212' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2107459C-C77F-41D1-8152-50890A8E1DFB}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[avg:Score:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{99728517-190F-4E82-BB8C-0A8589E592A1}' />
+    </window>
+    <window class='worksheet' name='scatterd plot '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CF981FFA-5A12-47F4-B90B-CE87B0323F27}' />
+    </window>
+    <window class='worksheet' name='bar chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1md3m7p05offnb166bxzf0fcu5jn].[none:Calculation_893120138110029824:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9FD0AADF-5A40-416F-B5AD-F1D809864F4C}' />
+    </window>
+    <window class='worksheet' name='KPI-national avg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{07B59F6B-2446-4AF5-AF81-E31F57A6B1AD}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='KPI-Equity Gap' />
+        <viewpoint name='KPI-national avg' />
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='bar chart' />
+        <viewpoint name='scatterd plot '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='total hopital count KPI' />
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{52A73D33-7950-43E9-BBB8-A503AFDFA320}' />
+    </window>
+    <window class='worksheet' name='total hopital count KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{123292DE-E51F-4BF4-A503-EF54FCB02837}' />
+    </window>
+    <window class='worksheet' name='KPI-Equity Gap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{492A4303-EE52-4966-843A-15EFCE8DBE94}' />
+    </window>
+  </windows>
+</workbook>
